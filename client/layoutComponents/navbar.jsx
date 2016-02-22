@@ -1,4 +1,5 @@
 import React from 'react';
+import AccountsUIWrapper from '../components/login.jsx';
 
 export const Navbar = ({links}) => (
   <nav className="navbar navbar-default">
@@ -13,10 +14,13 @@ export const Navbar = ({links}) => (
         <a className="navbar-brand" href="#">meetingDust</a>
       </div>
       <div className="collapse navbar-collapse" id="main-nav">
-        <ul className="nav navbar-nav pull-right">
+        <ul className="nav navbar-nav navbar-left">
           {links.map(link => (
             <li key={link}><a href="#">{link}</a></li>
           ))}
+        </ul>
+        <ul className="nav navbar-nav navbar-right">
+          <AccountsUIWrapper />
         </ul>
       </div>
     </div>
